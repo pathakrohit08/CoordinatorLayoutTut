@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.skywinidowtech.com.coordinatorlayouttut.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:lineSpacingExtra="8dp"
+            android:text="To follow along, you should be using the latest version of Android Studio. You can get it from the Android Developer website. To try these scrolling techniques, I recommend creating a new project (with a minimum API level of 15), because your application's layout will change significantly.I've provided a starter project, which you can download from GitHub. You can use the starter project as a starting point and use the scrolling techniques in your own applications. Let's first add the following dependencies to your project's build.gradle file inside the app folder:With the first dependency, you get the Android Design Support Library, which includes the new classes we need for this tutorial.With the second dependency, you get the latest version of RecyclerView. The version listed in the official article about creating lists won't be useful this time.Next, you are going to need some dummy data to try these techniques and populate the RecyclerView. You can implement them yourself or copy the implementation from the InitialActivity class in the starter project.This layout is another new container, designed specifically to implement many of the features of the Material Design app bar concept. Keep in mind that if you use it within another ViewGroup, most of its functionality won't work.The key to this scrolling technique, and most other scrolling techniques that we'll discuss, is the CoordinatorLayout class. This special class can receive events from and deliver events to its child views in order for them to respond appropriately. It is designed to be used as the root container view.To enable this technique, the app:layout_behavior attribute indicates which view will trigger the events in the Toolbar. In this case, that's the RecyclerView."
+            android:padding="@dimen/activity_horizontal_margin"
+            />
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
