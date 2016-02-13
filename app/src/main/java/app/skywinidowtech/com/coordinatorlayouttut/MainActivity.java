@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
         setupTabIcons();
     }
 
@@ -64,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new DogFragment(), "Dog");
-        adapter.addFragment(new CatFragment(), "Cat");
-        adapter.addFragment(new BirdFragment(), "Bird");
-        adapter.addFragment(new FishFragment(), "Fish");
+        adapter.addFragment(new DogFragment(),"Dog");
+        adapter.addFragment(new CatFragment(),"Cat");
+        adapter.addFragment(new BirdFragment(),"Bird");
+        adapter.addFragment(new FishFragment(),"Fish");
         viewPager.setAdapter(adapter);
     }
 
